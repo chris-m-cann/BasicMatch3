@@ -15,13 +15,12 @@ namespace Match3
 
             var cam = GetComponent<Camera>();
 
-            var x = ((float)width / 2) + offset.x;
-            var y = ((float)height / 2) + offset.y;
+            var x = ((float)width / 2) - 0.5f + offset.x;  // - 0.5f for half a tiles width
+            var y = ((float)height / 2) - 0.5f + offset.y; // - 0.5f for half a tiles height
             transform.position = transform.position.copy(x, y);
 
             // + 1 as width is center to center the size between the leftmost and right most element
-            // + 1 just for spacing
-            cam.orthographicSize = width + 1 + 1;
+            cam.orthographicSize = width + 1;
         }
     }
 }

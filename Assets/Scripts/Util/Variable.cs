@@ -1,5 +1,4 @@
-﻿using UnityEditor;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Util
 {
@@ -29,22 +28,6 @@ namespace Util
         public void CaptureRuntimeValues()
         {
             initialValue = Value;
-        }
-    }
-
-    public abstract class VariableEditor<T> : Editor
-    {
-        public override void OnInspectorGUI()
-        {
-            DrawDefaultInspector();
-
-            using (new EditorGUI.DisabledGroupScope(serializedObject.isEditingMultipleObjects))
-            {
-                if (GUILayout.Button("Capture Runtime Value"))
-                {
-                    ((Variable<T>)target).CaptureRuntimeValues();
-                }
-            }
         }
     }
 }
