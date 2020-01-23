@@ -5,12 +5,12 @@ namespace Util
 {
     public class ReloadScene : MonoBehaviour
     {
-        [SerializeField] private bool resetOnR = true;
+        [SerializeField] private KeyCode reloadKey = KeyCode.None;
 
         // Update is called once per frame
         private void Update()
         {
-            if (resetOnR && Input.GetKeyDown(KeyCode.R))
+            if (reloadKey != KeyCode.None && Input.GetKeyDown(reloadKey))
             {
                 ReloadCurrentScene();
             }
