@@ -4,13 +4,22 @@ namespace Util
 {
     public class Timer
     {
-        private float _elapsedTime = 0f;
+        public bool IsRunning { get; private set; }
 
-        public bool Elapsed { get { return _elapsedTime <= Time.time; } private set { } }
+        private float _elapsedTime = 0f;
+        
+
+        public bool Elapsed { get { return IsRunning && _elapsedTime <= Time.time; } private set { } }
 
         public void Start(float timeout)
         {
+            IsRunning = true;
             _elapsedTime = Time.time + timeout;
+        }
+
+        public void Stop()
+        {
+            IsRunning = false;
         }
     }
 }

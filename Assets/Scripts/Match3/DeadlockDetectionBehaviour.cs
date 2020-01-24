@@ -10,7 +10,7 @@ namespace Match3
 
         public void DetectDeadlock()
         {
-            StartCoroutine(detection.DetectDeadlock(RaiseEvent));
+            StartCoroutine(detection.DetectDeadlock(this, RaiseEvent));
         }
 
         private void RaiseEvent()

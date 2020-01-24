@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
+using System.Collections.Generic;
 
 namespace Match3
 {
@@ -11,46 +12,66 @@ namespace Match3
         [SerializeField] private UnityEvent DeadlockFound;
         [SerializeField] private MatchAccumulator matchFinder;
 
-        public System.Collections.IEnumerator DetectDeadlock(UnityAction onDeadlock = null)
+        public System.Collections.IEnumerator DetectDeadlock(MonoBehaviour context, UnityAction onDeadlock = null)
         {
+
+            yield return context.StartCoroutine(FindPotentialMatches(matches =>
+            {
+                if (matches.Count != 0) return;
+                // if we get all the way here then no potental matches have been found therefore deadlocked
+                Debug.LogError("Deadlock found!!");
+
+                if (onDeadlock != null)
+                {
+                    onDeadlock();
+                }
+                else
+                {
+                    Notify();
+                }
+            }));
+
+        }
+
+        public System.Collections.IEnumerator FindPotentialMatches(UnityAction<List<Match>> onMatches, bool firstOnly = true)
+        {
+            var matches = new List<Match>();
+
+            List<Match> potentialMatches = new List<Match>();
+
             for (int x = 0; x < grid.Width; x++)
             {
                 for (int y = 0; y < grid.Height; y++)
                 {
-                    var foundMatch = false;
+                    potentialMatches.Clear();
                     // stop us looking down off the grid
                     if (y > 0)
                     {
-                        foundMatch = CausesMatch(x, y, Vector2Int.down);
+                        potentialMatches.AddRange(MatchesCaused(x, y, Vector2Int.down));
                     }
 
                     // stop us looking left off the grid
-                    if (!foundMatch && x > 0)
+                    if (x > 0)
                     {
-                        foundMatch = CausesMatch(x, y, Vector2Int.left);
+                        potentialMatches.AddRange(MatchesCaused(x, y, Vector2Int.left));
                     }
 
-                    if (foundMatch)
+                    if (potentialMatches.Count > 0)
                     {
                         // match found therefore no deadlock
                         yield return null;
-                        yield break;
+                        matches.AddRange(potentialMatches);
+
+                        if (firstOnly)
+                        {
+                            onMatches(matches);
+                            yield break; // return from function
+                        }
                     }
                     yield return null;
                 }
             }
-
-            // if we get all the way here then no potental matches have been found therefore deadlocked
-            Debug.LogError("Deadlock found!!");
-
-            if (onDeadlock != null)
-            {
-                onDeadlock();
-            }
-            else
-            {
-                Notify();
-            }
+            onMatches(matches);
         }
 
         private void Notify()
@@ -58,7 +79,7 @@ namespace Match3
             DeadlockFound.Invoke();
         }
 
-        private bool CausesMatch(int x, int y, Vector2Int dir)
+        private List<Match> MatchesCaused(int x, int y, Vector2Int dir)
         {
             var x2 = x + dir.x;
             var y2 = y + dir.y;
@@ -68,13 +89,40 @@ namespace Match3
             // if one of them is a blocker we cant swap
             if (!grid.cells[x, y].IsPassable || !grid.cells[x2, y2].IsPassable)
             {
-                return false;
+                return new List<Match>();
             }
-           
+
             // if anything creates matches on swap then we definietely have a match (tags are probably the wrong way to do this)
-            if (tile1.CompareTag("MatchesOnSwap") || tile2.CompareTag("MatchesOnSwap"))
+            if (tile1.CompareTag("MatchesOnSwap"))
             {
-                return true;
+                var elements = new MatchElement[1];
+                elements[0] = new MatchElement
+                {
+                    i = x,
+                    j = y,
+                    tile = tile1.gameObject
+                };
+                var match = new Match(elements, false, 0);
+                match.causeElem = 0;
+                var matches = new List<Match>();
+                matches.Add(match);
+                return matches;
+            }
+
+            if (tile2.CompareTag("MatchesOnSwap"))
+            {
+                var elements = new MatchElement[1];
+                elements[0] = new MatchElement
+                {
+                    i = x2,
+                    j = y2,
+                    tile = tile2.gameObject
+                };
+                var match = new Match(elements, false, 0);
+                match.causeElem = 0;
+                var matches = new List<Match>();
+                matches.Add(match);
+                return matches;
             }
 
             var origionalPos = new Vector2Int(x, y);
@@ -86,7 +134,7 @@ namespace Match3
                 {
                     swappedPos1 = origionalPos,
                     swappedPos2 = origionalPos + dir
-                }).Count > 0;
+                });
             }
             finally
             {
