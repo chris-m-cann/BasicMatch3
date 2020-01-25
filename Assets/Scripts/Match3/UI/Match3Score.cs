@@ -16,6 +16,7 @@ namespace Match3
         {
             text = GetComponent<Text>();
             text.text = displayScore.ToString();
+
         }
 
         private void Update()

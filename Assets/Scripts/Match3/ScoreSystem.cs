@@ -9,7 +9,22 @@ namespace Match3
         // TODO(chris) - maybe move this to an event rather than just a variable so that things like spawning effects based on scores can be independedent
         // alternately make an ObservableVariable that fires and event when it is updated
         [SerializeField] private IntVariable score;
+
+        [SerializeField] private int[] levelThresholds;
+        [SerializeField] private IntUnityEvent onLevelThresholdReached;
+
         private int cumulativeMatches = 0;
+        private int currentLevel = 0;
+        private int nextLevelThreashold = 1000;
+
+        private void Start()
+        {
+            if (levelThresholds.Length > 0)
+            {
+                nextLevelThreashold = levelThresholds[0];
+            }
+        }
+
         public void ResetAccumulator()
         {
             cumulativeMatches = 0;
@@ -18,6 +33,11 @@ namespace Match3
         public void Score(Matches matches)
         {
             cumulativeMatches = Score(matches.matches, cumulativeMatches);
+
+            if (score.Value > nextLevelThreashold)
+            {
+                NextLevel();
+            }
         }
 
         private int Score(List<Match> matches, int totalMatches)
@@ -36,6 +56,24 @@ namespace Match3
                 score.Value += scoreIncrease;
             }
             return newTotalMatches;
+        }
+
+        private void NextLevel()
+        {
+            ++currentLevel;
+
+            // once we go past our configured level threshold amounts just double the score needed.
+            // this should lead to an exponential increase that makes getting too far past the "designed" level cap unlikely
+            if (levelThresholds.Length <= currentLevel)
+            {
+                nextLevelThreashold *= 2;
+            } else
+            {
+                nextLevelThreashold = levelThresholds[currentLevel];
+            }
+
+            // +1 as currentLevel is 0 indexed
+            onLevelThresholdReached.Invoke(currentLevel + 1);
         }
     }
 }

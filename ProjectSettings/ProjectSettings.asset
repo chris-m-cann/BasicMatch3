@@ -706,10 +706,10 @@ PlayerSettings:
   facebookXfbml: 0
   facebookFrictionlessRequests: 1
   apiCompatibilityLevel: 6
-  cloudProjectId: 
+  cloudProjectId: cf53f1cf-c95a-460e-821e-ef3127740500
   framebufferDepthMemorylessMode: 0
-  projectName: 
-  organizationId: 
+  projectName: BasicMatch3
+  organizationId: chris-cann
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0
