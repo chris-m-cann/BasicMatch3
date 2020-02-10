@@ -62,14 +62,6 @@ crashlytics-build.properties
 
 
 # third party assets
-/**/TextMesh\ Pro/
-/**/TextMesh\ Pro.*
-/**/JMO\ Assets/
-/**/JMO\ Assets.*
-/**/LightningBolt/
-/**/LightningBolt.*
-
-# these are all 3rd part assets from "Universal Sound FX" and "Ultimate Game Music Collection"
-/**/Sounds.*
-/**/Sounds/
+/**/ThirdParty/
+/**/ThirdParty.*
 
