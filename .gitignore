@@ -71,5 +71,5 @@ crashlytics-build.properties
 
 # these are all 3rd part assets from "Universal Sound FX" and "Ultimate Game Music Collection"
 /**/Sounds.*
-/**/Sounds./
+/**/Sounds/
 
