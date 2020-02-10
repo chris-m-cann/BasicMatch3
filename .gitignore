@@ -9,8 +9,8 @@
 /[Bb]uilds/
 /[Ll]ogs/
 /[Mm]emoryCaptures/
-/**/TextMesh\ Pro/
-/**/TextMesh\ Pro.*
+
+
 
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !/[Aa]ssets/**/*.meta
@@ -59,4 +59,17 @@ sysinfo.txt
 
 # Crashlytics generated file
 crashlytics-build.properties
+
+
+# third party assets
+/**/TextMesh\ Pro/
+/**/TextMesh\ Pro.*
+/**/JMO\ Assets/
+/**/JMO\ Assets.*
+/**/LightningBolt/
+/**/LightningBolt.*
+
+# these are all 3rd part assets from "Universal Sound FX" and "Ultimate Game Music Collection"
+/**/Sounds.*
+/**/Sounds./
 
