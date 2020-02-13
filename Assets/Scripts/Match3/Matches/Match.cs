@@ -13,6 +13,21 @@ namespace Match3
         public bool canCreateShape;
         public int score;
 
+        public MatchElement Cause
+        {
+            get
+            {
+                if (causeElem > 0 && causeElem < elements.Length)
+                {
+                    return elements[causeElem];
+                }
+                else
+                {
+                    return elements[elements.Length - 1];
+                }
+            }
+        }
+
         public Match(MatchElement[] elems, bool canCreateShape = true, int score = 10)
         {
             elements = elems;

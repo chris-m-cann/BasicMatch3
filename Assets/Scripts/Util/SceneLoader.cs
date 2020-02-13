@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 namespace Util
 {
-    public class ReloadScene : MonoBehaviour
+    public class SceneLoader : MonoBehaviour
     {
         [SerializeField] private KeyCode reloadKey = KeyCode.None;
 
@@ -24,6 +24,11 @@ namespace Util
         static public void ReloadCurrentScene()
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+
+        public void LoadNextScene()
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 }

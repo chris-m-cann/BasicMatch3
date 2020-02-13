@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -7,13 +8,21 @@ namespace Match3
     public class GridCollector : MonoBehaviour
     {
         [SerializeField] private RuntimeGridData gridData;
+        [SerializeField] private GridValidtor validator;
         [SerializeField] private UnityEvent OnGridCreated;
 
         private void Start()
         {
+            StartCoroutine(InitialiseGame());
+        }
+
+        private IEnumerator InitialiseGame()
+        {
             gridData.cells = BuildGridData();
 
             TriggerOnCreateAbilities();
+
+            yield return StartCoroutine(validator.ValidateGrid());
 
             OnGridCreated.Invoke();
         }

@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="2100px"
+   height="3360px"
+   viewBox="0 0 2100 3360"
+   version="1.1"
+   id="SVGRoot"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   sodipodi:docname="main_menu.svg">
+  <defs
+     id="defs815">
+    <marker
+       inkscape:stockid="TriangleInS"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker5919"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         inkscape:connector-curvature="0"
+         id="path5917"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffff00;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="scale(-0.2)" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="marker5007"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="TriangleInS">
+      <path
+         transform="scale(-0.2)"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:1.00000003pt;stroke-opacity:1"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path5005"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter1567"
+       x="-0.050179426"
+       width="1.1003589"
+       y="-0.16358098"
+       height="1.327162">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="37.150062"
+         id="feGaussianBlur1569" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter4012"
+       x="-0.21400395"
+       width="1.4280079"
+       y="-0.18631169"
+       height="1.3726234">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="29.139249"
+         id="feGaussianBlur4014" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter4169"
+       x="-0.1704"
+       width="1.3408"
+       y="-0.1704"
+       height="1.3408">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="37.317619"
+         id="feGaussianBlur4171" />
+    </filter>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="marker5007-6"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="TriangleInS"
+       inkscape:collect="always">
+      <path
+         transform="scale(-0.2)"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:1.00000003pt;stroke-opacity:1"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path5005-2"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter6545"
+       x="-0.240226"
+       width="1.480452"
+       y="-0.29013367"
+       height="1.5802673">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="26.673914"
+         id="feGaussianBlur6547" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter6741"
+       x="-0.12560867"
+       width="1.2512173"
+       y="-0.24818986"
+       height="1.4963797">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="53.631736"
+         id="feGaussianBlur6743" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter6881"
+       x="-0.076784379"
+       width="1.1535688"
+       y="-0.68060945"
+       height="2.3612189">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="53.043376"
+         id="feGaussianBlur6883" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter1257"
+       x="-0.018589956"
+       width="1.0371799"
+       y="-0.17447984"
+       height="1.3489597">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="11.93254"
+         id="feGaussianBlur1259" />
+    </filter>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.24380952"
+     inkscape:cx="1308.5062"
+     inkscape:cy="2020.7227"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1058"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:pagecheckerboard="true" />
+  <metadata
+     id="metadata818">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Background">
+    <rect
+       style="opacity:1;fill:#0a0016;fill-opacity:0.99497483;stroke:#ffffff;stroke-opacity:0.55294118"
+       id="rect1584"
+       width="2214.8438"
+       height="3445.3125"
+       x="2165.625"
+       y="-73.007812" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer5"
+     inkscape:label="Retry">
+    <path
+       sodipodi:type="spiral"
+       style="fill:none;fill-rule:evenodd;stroke:#ffff00;stroke-width:18.38740158;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker5919);filter:url(#filter6545)"
+       id="path5915"
+       sodipodi:cx="1212.4093"
+       sodipodi:cy="1208.4805"
+       sodipodi:expansion="1"
+       sodipodi:revolution="1.6914474"
+       sodipodi:radius="156.22752"
+       sodipodi:argument="-20.034843"
+       sodipodi:t0="0.32185283"
+       d="m 1181.4034,1248.0651 c -33.1765,-13.2527 -41.7861,-55.0014 -26.7569,-84.8292 21.5845,-42.8378 77.3047,-53.208 117.246,-30.6964 52.5886,29.6399 64.734,99.6923 34.6359,149.6629 -37.5781,62.3892 -122.1212,76.3146 -182.0796,38.5753 -39.6059,-24.9288 -64.6957,-68.593 -68.2428,-115.0485"
+       transform="matrix(1.8665818,0,0,2.23253,-1203.0241,-1546.3115)" />
+    <path
+       transform="matrix(1.8665818,0,0,2.23253,-1203.0241,-1546.3115)"
+       d="m 1181.4034,1248.0651 c -33.1765,-13.2527 -41.7861,-55.0014 -26.7569,-84.8292 21.5845,-42.8378 77.3047,-53.208 117.246,-30.6964 52.5886,29.6399 64.734,99.6923 34.6359,149.6629 -37.5781,62.3892 -122.1212,76.3146 -182.0796,38.5753 -39.6059,-24.9288 -64.6957,-68.593 -68.2428,-115.0485"
+       sodipodi:t0="0.32185283"
+       sodipodi:argument="-20.034843"
+       sodipodi:radius="156.22752"
+       sodipodi:revolution="1.6914474"
+       sodipodi:expansion="1"
+       sodipodi:cy="1208.4805"
+       sodipodi:cx="1212.4093"
+       id="path4643"
+       style="fill:none;fill-rule:evenodd;stroke:#ffffff;stroke-width:18.38740158;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker5007-6)"
+       sodipodi:type="spiral" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer4"
+     inkscape:label="quit">
+    <path
+       transform="matrix(0.57134977,0.28933638,-0.28933638,0.57134977,1381.8638,869.92051)"
+       d="M 574.21875,2761.1719 685.75622,2410.1196 336.32814,2293.5938 687.38036,2405.1312 803.90625,2055.7031 692.36878,2406.7554 1041.7969,2523.2812 690.74464,2411.7438 Z"
+       inkscape:randomized="0"
+       inkscape:rounded="0"
+       inkscape:flatsided="false"
+       sodipodi:arg2="2.6709522"
+       sodipodi:arg1="1.885554"
+       sodipodi:r2="3.7095904"
+       sodipodi:r1="370.95905"
+       sodipodi:cy="2408.4375"
+       sodipodi:cx="689.0625"
+       sodipodi:sides="4"
+       id="path4019"
+       style="opacity:1;fill:#0a0016;fill-opacity:0;stroke:#00ffff;stroke-width:59.18621445;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.99497483;filter:url(#filter4169)"
+       sodipodi:type="star" />
+    <path
+       sodipodi:type="star"
+       style="opacity:1;fill:#0a0016;fill-opacity:0;stroke:#ffffff;stroke-width:59.18621445;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.99497483"
+       id="path4017"
+       sodipodi:sides="4"
+       sodipodi:cx="689.0625"
+       sodipodi:cy="2408.4375"
+       sodipodi:r1="370.95905"
+       sodipodi:r2="3.7095904"
+       sodipodi:arg1="1.885554"
+       sodipodi:arg2="2.6709522"
+       inkscape:flatsided="false"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="M 574.21875,2761.1719 685.75622,2410.1196 336.32814,2293.5938 687.38036,2405.1312 803.90625,2055.7031 692.36878,2406.7554 1041.7969,2523.2812 690.74464,2411.7438 Z"
+       transform="matrix(0.57134977,0.28933638,-0.28933638,0.57134977,1381.8638,869.92051)" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="play">
+    <path
+       inkscape:transform-center-y="0.99122359"
+       inkscape:transform-center-x="-53.320312"
+       d="m 923.46229,2017.6566 -3.43372,-375.3613 326.78933,184.707 z"
+       inkscape:randomized="0"
+       inkscape:rounded="0"
+       inkscape:flatsided="true"
+       sodipodi:arg2="3.1324452"
+       sodipodi:arg1="2.0852476"
+       sodipodi:r2="108.36201"
+       sodipodi:r1="216.72401"
+       sodipodi:cy="1828.9848"
+       sodipodi:cx="1030.1029"
+       sodipodi:sides="3"
+       id="path2346"
+       style="opacity:1;fill:#0a0016;fill-opacity:0;stroke:#00ff00;stroke-width:30.8598423;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.99497485;filter:url(#filter4012)"
+       sodipodi:type="star" />
+    <path
+       sodipodi:type="star"
+       style="opacity:1;fill:#0a0016;fill-opacity:0;stroke:#ffffff;stroke-width:30.8598423;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.99497483"
+       id="path2328"
+       sodipodi:sides="3"
+       sodipodi:cx="1030.1029"
+       sodipodi:cy="1828.9848"
+       sodipodi:r1="216.72401"
+       sodipodi:r2="108.36201"
+       sodipodi:arg1="2.0852476"
+       sodipodi:arg2="3.1324452"
+       inkscape:flatsided="true"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 923.46229,2017.6566 -3.43372,-375.3613 326.78933,184.707 z"
+       inkscape:transform-center-x="-53.320312"
+       inkscape:transform-center-y="0.99122359" />
+  </g>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <flowRoot
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:266.66665649px;line-height:1.25;font-family:Magneto;-inkscape-font-specification:'Magneto Bold';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ff00ff;fill-opacity:1;stroke:none;filter:url(#filter1567)"
+       id="flowRoot1397"
+       xml:space="preserve"
+       transform="translate(-2169.7266,-16.40625)"><flowRegion
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:266.66665649px;font-family:Magneto;-inkscape-font-specification:'Magneto Bold';text-align:center;text-anchor:middle;fill:#ff00ff;fill-opacity:1"
+         id="flowRegion1391"><rect
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:266.66665649px;font-family:Magneto;-inkscape-font-specification:'Magneto Bold';text-align:center;text-anchor:middle;fill:#ff00ff;fill-opacity:1"
+           y="160.78125"
+           x="86.132812"
+           height="668.55469"
+           width="1919.5312"
+           id="rect1389" /></flowRegion><flowPara
+         style="fill:#ff00ff;fill-opacity:1"
+         id="flowPara1393">CYBERIUM</flowPara><flowPara
+         style="fill:#ff00ff;fill-opacity:1"
+         id="flowPara1395">ALPHA</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot1371"
+       style="fill:black;fill-opacity:1;stroke:none;font-family:Aharoni;font-style:normal;font-weight:normal;font-size:192px;line-height:1.25;letter-spacing:0px;word-spacing:0px;-inkscape-font-specification:Aharoni;font-stretch:normal;font-variant:normal;"><flowRegion
+         id="flowRegion1373"
+         style="-inkscape-font-specification:Aharoni;font-family:Aharoni;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:192px;"><rect
+           id="rect1375"
+           width="1796.4844"
+           height="844.92188"
+           x="110.74219"
+           y="193.59375"
+           style="-inkscape-font-specification:Aharoni;font-family:Aharoni;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:192px;" /></flowRegion><flowPara
+         id="flowPara1377" /></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot1379"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:266.66665649px;line-height:1.25;font-family:Magneto;-inkscape-font-specification:'Magneto Bold';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+       transform="translate(-2169.7266,-16.40625)"><flowRegion
+         id="flowRegion1381"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:266.66665649px;font-family:Magneto;-inkscape-font-specification:'Magneto Bold';text-align:center;text-anchor:middle"><rect
+           id="rect1383"
+           width="1919.5312"
+           height="668.55469"
+           x="86.132812"
+           y="160.78125"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:266.66665649px;font-family:Magneto;-inkscape-font-specification:'Magneto Bold';text-align:center;text-anchor:middle" /></flowRegion><flowPara
+         id="flowPara1385"
+         style="fill:#ffffff;fill-opacity:1">CYBERIUM</flowPara><flowPara
+         id="flowPara1387"
+         style="fill:#ffffff;fill-opacity:1">ALPHA</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot6584"
+       style="fill:black;fill-opacity:1;stroke:none;font-family:sans-serif;font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;letter-spacing:0px;word-spacing:0px"><flowRegion
+         id="flowRegion6586"><rect
+           id="rect6588"
+           width="36.914062"
+           height="369.14062"
+           x="1037.6953"
+           y="472.49997" /></flowRegion><flowPara
+         id="flowPara6590" /></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot6592"
+       style="fill:black;fill-opacity:1;stroke:none;font-family:sans-serif;font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;letter-spacing:0px;word-spacing:0px"><flowRegion
+         id="flowRegion6594"><rect
+           id="rect6596"
+           width="16.40625"
+           height="332.22656"
+           x="1082.8125"
+           y="439.68747" /></flowRegion><flowPara
+         id="flowPara6598" /></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot6604"
+       style="fill:black;fill-opacity:1;stroke:none;font-family:sans-serif;font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;letter-spacing:0px;word-spacing:0px"><flowRegion
+         id="flowRegion6606"><rect
+           id="rect6608"
+           width="2325.5859"
+           height="1058.2031"
+           x="-90.234375"
+           y="-68.906303" /></flowRegion><flowPara
+         id="flowPara6610" /></flowRoot>    <flowRoot
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:semi-expanded;font-size:266.66665649px;line-height:1.25;font-family:Magneto;-inkscape-font-specification:'Magneto Bold Semi-Expanded';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#fe0000;fill-opacity:1;stroke:none;filter:url(#filter6741)"
+       id="flowRoot6647"
+       xml:space="preserve"
+       transform="translate(-2024.1537,1154.4922)"><flowRegion
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:semi-expanded;font-size:266.66665649px;font-family:Magneto;-inkscape-font-specification:'Magneto Bold Semi-Expanded';text-align:center;text-anchor:middle;fill:#fe0000;fill-opacity:1"
+         id="flowRegion6641"><rect
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:semi-expanded;font-size:266.66665649px;font-family:Magneto;-inkscape-font-specification:'Magneto Bold Semi-Expanded';text-align:center;text-anchor:middle;fill:#fe0000;fill-opacity:1"
+           y="189.49214"
+           x="266.60156"
+           height="643.94537"
+           width="1575"
+           id="rect6639" /></flowRegion><flowPara
+         id="flowPara6643">GAME</flowPara><flowPara
+         id="flowPara6645">OVER</flowPara></flowRoot>    <flowRoot
+       transform="translate(-2024.1537,1154.4922)"
+       xml:space="preserve"
+       id="flowRoot6574"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:semi-expanded;font-size:266.66665649px;line-height:1.25;font-family:Magneto;-inkscape-font-specification:'Magneto Bold Semi-Expanded';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none"><flowRegion
+         id="flowRegion6576"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:semi-expanded;font-size:266.66665649px;font-family:Magneto;-inkscape-font-specification:'Magneto Bold Semi-Expanded';text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1"><rect
+           id="rect6578"
+           width="1575"
+           height="643.94537"
+           x="266.60156"
+           y="189.49214"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:semi-expanded;font-size:266.66665649px;font-family:Magneto;-inkscape-font-specification:'Magneto Bold Semi-Expanded';text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1" /></flowRegion><flowPara
+         id="flowPara6582">GAME</flowPara><flowPara
+         id="flowPara6602">OVER</flowPara></flowRoot>    <flowRoot
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:semi-expanded;font-size:226.66667175px;line-height:1.25;font-family:Magneto;-inkscape-font-specification:'Magneto Bold Semi-Expanded';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ff6400;fill-opacity:1;stroke:none;filter:url(#filter6881)"
+       id="flowRoot6759"
+       xml:space="preserve"
+       transform="translate(-2013.8672,2296.875)"><flowRegion
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:semi-expanded;font-size:226.66667175px;font-family:Magneto;-inkscape-font-specification:'Magneto Bold Semi-Expanded';text-align:center;text-anchor:middle;fill:#ff6400;fill-opacity:1"
+         id="flowRegion6755"><rect
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:semi-expanded;font-size:226.66667175px;font-family:Magneto;-inkscape-font-specification:'Magneto Bold Semi-Expanded';text-align:center;text-anchor:middle;fill:#ff6400;fill-opacity:1"
+           y="148.47652"
+           x="151.75781"
+           height="303.51559"
+           width="1788.2812"
+           id="rect6753" /></flowRegion><flowPara
+         id="flowPara6757">LOADING...</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot6745"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:semi-expanded;font-size:226.66667175px;line-height:1.25;font-family:Magneto;-inkscape-font-specification:'Magneto Bold Semi-Expanded';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none"
+       transform="translate(-2013.8672,2296.875)"><flowRegion
+         id="flowRegion6747"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:semi-expanded;font-size:226.66667175px;font-family:Magneto;-inkscape-font-specification:'Magneto Bold Semi-Expanded';text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1"><rect
+           id="rect6749"
+           width="1788.2812"
+           height="303.51559"
+           x="151.75781"
+           y="148.47652"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:semi-expanded;font-size:226.66667175px;font-family:Magneto;-inkscape-font-specification:'Magneto Bold Semi-Expanded';text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1" /></flowRegion><flowPara
+         id="flowPara6751">LOADING...</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot893"
+       style="fill:black;fill-opacity:1;stroke:none;font-family:Magneto;font-style:normal;font-weight:bold;font-size:40px;line-height:1.25;letter-spacing:0px;word-spacing:0px;-inkscape-font-specification:'Magneto Bold Semi-Expanded';font-stretch:semi-expanded;font-variant:normal;"><flowRegion
+         id="flowRegion895"
+         style="-inkscape-font-specification:'Magneto Bold Semi-Expanded';font-family:Magneto;font-weight:bold;font-style:normal;font-stretch:semi-expanded;font-variant:normal;"><rect
+           id="rect897"
+           width="1689.8438"
+           height="414.25781"
+           x="241.99219"
+           y="164.88277"
+           style="-inkscape-font-specification:'Magneto Bold Semi-Expanded';font-family:Magneto;font-weight:bold;font-style:normal;font-stretch:semi-expanded;font-variant:normal;" /></flowRegion><flowPara
+         id="flowPara899"></flowPara></flowRoot>    <flowRoot
+       style="font-style:normal;font-weight:bold;font-size:226.66666667px;line-height:1.25;font-family:Magneto;letter-spacing:0px;word-spacing:0px;fill:#ffff00;fill-opacity:0.96482414;stroke:none;-inkscape-font-specification:'Magneto Bold Semi-Expanded';font-stretch:semi-expanded;font-variant:normal;text-anchor:middle;text-align:center;filter:url(#filter1257)"
+       id="flowRoot915"
+       xml:space="preserve"><flowRegion
+         style="-inkscape-font-specification:'Magneto Bold Semi-Expanded';font-family:Magneto;font-weight:bold;font-style:normal;font-stretch:semi-expanded;font-variant:normal;font-size:226.66666667px;text-anchor:middle;text-align:center;fill:#ffff00;fill-opacity:0.96482414;"
+         id="flowRegion911"><rect
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:semi-expanded;font-size:226.66667175px;font-family:Magneto;-inkscape-font-specification:'Magneto Bold Semi-Expanded';text-align:center;text-anchor:middle;fill:#ffff00;fill-opacity:0.96482414;"
+           y="156.67964"
+           x="188.67188"
+           height="274.80466"
+           width="1587.3047"
+           id="rect909" /></flowRegion><flowPara
+         id="flowPara913">LEVEL UP!</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot901"
+       style="font-style:normal;font-weight:bold;font-size:226.66666667px;line-height:1.25;font-family:Magneto;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;-inkscape-font-specification:'Magneto Bold Semi-Expanded';font-stretch:semi-expanded;font-variant:normal;text-anchor:middle;text-align:center;"><flowRegion
+         id="flowRegion903"
+         style="-inkscape-font-specification:'Magneto Bold Semi-Expanded';font-family:Magneto;font-weight:bold;font-style:normal;font-stretch:semi-expanded;font-variant:normal;font-size:226.66666667px;text-anchor:middle;text-align:center;fill:#ffffff;fill-opacity:1;"><rect
+           id="rect905"
+           width="1587.3047"
+           height="274.80466"
+           x="188.67188"
+           y="156.67964"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:semi-expanded;font-size:226.66667175px;font-family:Magneto;-inkscape-font-specification:'Magneto Bold Semi-Expanded';text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1" /></flowRegion><flowPara
+         id="flowPara907">LEVEL UP!</flowPara></flowRoot>  </g>
+</svg>

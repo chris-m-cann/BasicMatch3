@@ -1,10 +1,14 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
+using Util;
 
 namespace Match3
 {
     public class RandomTile : Tile
     {
         [SerializeField] private RandomTileBuilder builder;
+
+        private Tile generated;
 
         public override void OnCreate(SwapEventData swapData, Tile cause)
         {
@@ -26,15 +30,24 @@ namespace Match3
         private void GenerateNewTile()
         {
             var chosenTile = builder.Build(transform.position);
-            var chosenSpriteRenderer = chosenTile.GetComponent<SpriteRenderer>();
-            var myRenderer = GetComponent<SpriteRenderer>();
 
-            myRenderer.sprite = chosenSpriteRenderer.sprite;
-            myRenderer.color = chosenSpriteRenderer.color;
+            GetComponent<SpriteRenderer>().CopyFrom(chosenTile.GetComponent<SpriteRenderer>());
+
 
             tag = chosenTile.tag;
-            Destroy(chosenTile.gameObject);
+
+
+            chosenTile.gameObject.SetActive(false);
+            generated = chosenTile;
+            generated.transform.parent = transform;
+
             //  Debug.Log($"Random tile genreation done @({Mathf.RoundToInt(transform.position.x)}, {Mathf.RoundToInt(transform.position.y)})");
+        }
+
+        public override List<Match> OnDestroyed()
+        {
+            generated.transform.position = transform.position;
+            return generated.OnDestroyed();
         }
     }
 }

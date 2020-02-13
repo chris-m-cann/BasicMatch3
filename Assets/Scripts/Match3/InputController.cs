@@ -8,14 +8,12 @@ namespace Match3
         [SerializeField] private bool touchInput = false;
         [SerializeField] private RuntimeGridData grid;
         [SerializeField] private CoreLogic game;
+        [SerializeField] private GameStateVariable gameState;
+        [SerializeField] private GameState allowedState;
 
         private GameObject highlighted;
-        private bool inputIsAllowed = true;
 
-        public void SetInputAllowed(bool allowInput)
-        {
-            inputIsAllowed = allowInput;
-        }
+        private bool InputIsAllowed { get { return gameState.Value == allowedState; } }
 
         private void Update()
         {
@@ -32,7 +30,7 @@ namespace Match3
         // this isnt strictly needed as we acheive the same thing on touch devices just using the mouse controls but is being kept in case we expand it beyond what mouse can do
         private void TouchUpdate()
         {
-            if (Input.touchCount > 0 && inputIsAllowed)
+            if (Input.touchCount > 0 && InputIsAllowed)
             {
                 Touch touch = Input.GetTouch(0);
                 if (touch.phase == TouchPhase.Began)
@@ -76,7 +74,7 @@ namespace Match3
 
         private void MouseUpdate()
         {
-            if (Input.GetMouseButton(0) && inputIsAllowed)
+            if (Input.GetMouseButton(0) && InputIsAllowed)
             {
                 if (Input.GetMouseButtonDown(0))
                 {

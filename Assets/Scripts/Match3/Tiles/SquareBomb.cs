@@ -1,15 +1,22 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 using System.Linq;
+using Util;
 
 
 namespace Match3
 {
-    // TODO(chris) - need spawned effects to take on the tag of the match that spawned them
     public class SquareBomb : Tile
     {
         [SerializeField] private int squareBombScore = 60;
         [SerializeField] private RuntimeGridData grid;
+
+        private MatchEffect onDestroyEffect;
+
+        private void Awake()
+        {
+            onDestroyEffect = GetComponent<MatchEffect>();
+        }
 
 
         public override void OnCreate(SwapEventData swapData, Tile cause)
@@ -20,10 +27,8 @@ namespace Match3
                 return;
             }
 
-            var mySr = GetComponent<SpriteRenderer>();
-            var causeSr = cause.GetComponent<SpriteRenderer>();
+            GetComponent<SpriteRenderer>().CopyFrom(cause.GetComponent<SpriteRenderer>());
 
-            mySr.sprite = causeSr.sprite;
             tag = cause.tag;
         }
 
@@ -104,6 +109,9 @@ namespace Match3
 
             // dont blow up blockers!
             var passableElements = elements.Where(it => grid.cells[it.i, it.j].IsPassable).ToArray();
+
+
+            onDestroyEffect?.SpawnEffect(passableElements);
 
             matches.Add(new Match(passableElements, false, squareBombScore));
 

@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using System;
 using UnityEngine;
 using Util;
 
@@ -23,48 +24,69 @@ namespace Match3
             // for each element run any on destruction stuff and add to end of matches list
             for (int i = 0; i < matches.Count; i++)
             {
-                foreach(var elem in matches[i].elements)
+                foreach (var elem in matches[i].elements)
                 {
                     if (!distinctElements.Contains(elem))
                     {
                         matches.AddRange(elem.tile.GetComponent<Tile>().OnDestroyed());
                         distinctElements.Add(elem);
                     }
-                    
+
                 }
             }
 
-            distinctElements.Clear();
+            var spawned = new List<MatchElement>();
 
+            // for each match see if they for the shapes for a powerup
+            // add any tiles caught in startup effects to the elements to be destroyed 
+            // add any powerups spawned to a list to be added to the grid once the other tiles have been destroyed
             for (int i = 0; i < matches.Count; i++)
             {
-                Match newMatch = SpawnEffects(matches[i], swapData);
-                foreach (var elem in newMatch.elements)
+                Effect effect = SpawnEffects(matches[i], swapData);
+                if (effect.match.HasValue)
                 {
-                    distinctElements.Add(elem);
+                    foreach (var elem in effect.match.Value.elements)
+                    {
+                        distinctElements.Add(elem);
+                    }
+                }
+
+                if (effect.spawned.HasValue)
+                {
+                    spawned.Add(effect.spawned.Value);
                 }
             }
+
+            // actually destroy the tiles
             foreach (var elem in distinctElements)
             {
-                //  Debug.Log($"Destroying tile @({elem.i}, {elem.j})");
                 Destroy(elem.tile);
                 grid.SetTileAt(null, elem.i, elem.j);
             }
 
+            // add spawned powerups to the grid
+            foreach (var newTile in spawned)
+            {
+                grid.SetTileAt(newTile.tile.GetComponent<Tile>(), newTile.i, newTile.j);
+            }
         }
 
         // move to a seperate object that triggers in a match destruction
-        private Match SpawnEffects(Match match, SwapEventData swapData)
+        private Effect SpawnEffects(Match match, SwapEventData swapData)
         {
 
             if (match.canCreateShape == false)
             {
-                return match;
+                return Effect.None;
             }
 
             var shape = MatchShapes.FindShape(match);
 
-            if (shape != null)
+            if (shape == null)
+            {
+                return Effect.None;
+            }
+            else
             {
                 int causePos;
                 // right now if we couldnt work out the element that caused the match (the one you swapped)
@@ -84,14 +106,34 @@ namespace Match3
 
                 if (powerup != null)
                 {
-                    grid.SetTileAt(powerup, cause.i, cause.j);
-                    powerup.OnCreate(swapData, cause.tile.GetComponent<Tile>());
-                    Destroy(cause.tile);
-                    match.elements = match.elements.RemoveAt(causePos);
+                    powerup.OnCreate(swapData, cause.tile.GetComponent<Tile>()); 
+                    return new Effect
+                    {
+                        match = null,
+                        spawned = new MatchElement { i = cause.i, j = cause.j, tile = powerup.gameObject }
+                    };
+                } else
+                {
+                    return Effect.None;
                 }
             }
 
-            return match;
+
+
+        }
+
+        private struct Effect
+        {
+            // I know match looks dumb right now but just seemed like an effect that imediately destroys some tiles 
+            // seems like a pretty normal thing to want
+            public Match? match;
+            public MatchElement? spawned;
+
+            public static Effect None = new Effect
+            {
+                match = null,
+                spawned = null
+            };
         }
 
     }

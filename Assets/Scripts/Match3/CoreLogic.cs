@@ -1,10 +1,12 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.Events;
 
 namespace Match3
 {
     public class CoreLogic : MonoBehaviour
     {
+
         [Header("Events")]
         [SerializeField] private UnityEvent ResolvingMatches;
         [SerializeField] private UnityEvent MatchesResolved;
@@ -17,6 +19,7 @@ namespace Match3
         [SerializeField] private GridFixer fixer;
         [SerializeField] private MatchAccumulator matchFinder;
         [SerializeField] private MatchDestroyer destroyer;
+
 
 
         public void Swap(GameObject tile1, GameObject tile2)
@@ -73,6 +76,7 @@ namespace Match3
                             matches = matches
                         });
 
+                        yield return null;
 
                         destroyer.DestroyMatches(matches, swapData);
 
@@ -90,7 +94,7 @@ namespace Match3
                 }
 
                 yield return null;
-            }
+            } 
             finally
             {
                 MatchesResolved.Invoke();

@@ -7,37 +7,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4181113365009938521, guid: 1abe44942a1bd034fa98b56c0714a2aa,
-        type: 3}
-      propertyPath: m_Name
-      value: Matchable_Hexagon
-      objectReference: {fileID: 0}
-    - target: {fileID: 4181113365009938521, guid: 1abe44942a1bd034fa98b56c0714a2aa,
-        type: 3}
-      propertyPath: m_TagString
-      value: Matchable_Hexagon
-      objectReference: {fileID: 0}
-    - target: {fileID: 2829536412348358689, guid: 1abe44942a1bd034fa98b56c0714a2aa,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 6e9b8441c24316643a8ae7155f0a4fff,
-        type: 3}
-    - target: {fileID: 2829536412348358689, guid: 1abe44942a1bd034fa98b56c0714a2aa,
-        type: 3}
-      propertyPath: m_Color.r
-      value: 0.63529414
-      objectReference: {fileID: 0}
-    - target: {fileID: 2829536412348358689, guid: 1abe44942a1bd034fa98b56c0714a2aa,
-        type: 3}
-      propertyPath: m_Color.g
-      value: 0.15686275
-      objectReference: {fileID: 0}
-    - target: {fileID: 2829536412348358689, guid: 1abe44942a1bd034fa98b56c0714a2aa,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 0.18823531
-      objectReference: {fileID: 0}
     - target: {fileID: 1047464914234981426, guid: 1abe44942a1bd034fa98b56c0714a2aa,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -92,6 +61,42 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2829536412348358689, guid: 1abe44942a1bd034fa98b56c0714a2aa,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ae4ec6e18149eac459557dff568c9fc5,
+        type: 3}
+    - target: {fileID: 2829536412348358689, guid: 1abe44942a1bd034fa98b56c0714a2aa,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2829536412348358689, guid: 1abe44942a1bd034fa98b56c0714a2aa,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2829536412348358689, guid: 1abe44942a1bd034fa98b56c0714a2aa,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2829536412348358689, guid: 1abe44942a1bd034fa98b56c0714a2aa,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f8b1ec3c5e15dda4d9a2275d27cca1ba, type: 2}
+    - target: {fileID: 4181113365009938521, guid: 1abe44942a1bd034fa98b56c0714a2aa,
+        type: 3}
+      propertyPath: m_Name
+      value: Matchable_Hexagon
+      objectReference: {fileID: 0}
+    - target: {fileID: 4181113365009938521, guid: 1abe44942a1bd034fa98b56c0714a2aa,
+        type: 3}
+      propertyPath: m_TagString
+      value: Matchable_Hexagon
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1abe44942a1bd034fa98b56c0714a2aa, type: 3}

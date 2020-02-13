@@ -1,6 +1,9 @@
-﻿using System.Collections;
+﻿using DigitalRuby.LightningBolt;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Util;
 
 namespace Match3
 {
@@ -8,6 +11,18 @@ namespace Match3
     {
         [SerializeField] private int scoreMulitplier = 10;
         [SerializeField] private RuntimeGridData grid;
+        [SerializeField] private GameObject explosionPrefab;
+        [SerializeField] private GameObject effectPrefab;
+        [SerializeField] private float effectDuration;
+        [SerializeField] private float freezeDuration;
+        [SerializeField] private AudioClip effectSound;
+
+        private MatchEffect onDestroyEffect;
+
+        private void Awake()
+        {
+            onDestroyEffect = GetComponent<MatchEffect>();
+        }
 
         public override List<Match> OnSwap(Tile other)
         {
@@ -26,9 +41,16 @@ namespace Match3
                     }
                 }
             }
+
+            var elementsArray = elements.ToArray();
+
+            onDestroyEffect?.SpawnEffect(elementsArray);
+
+
             var matches = new List<Match>();
-            matches.Add(new Match(elements.ToArray(), false, scoreMulitplier * elements.Count));
+            matches.Add(new Match(elementsArray, false, scoreMulitplier * elements.Count));
             return matches;
         }
+        
     }
 }

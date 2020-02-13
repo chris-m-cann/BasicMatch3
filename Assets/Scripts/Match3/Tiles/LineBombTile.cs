@@ -1,5 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using DigitalRuby.LightningBolt;
+using System;
+using System.Collections.Generic;
 using UnityEngine;
+using Util;
 
 namespace Match3
 {
@@ -8,10 +11,15 @@ namespace Match3
     {
         [SerializeField] private RuntimeGridData grid;
         [SerializeField] private int BombScore = 50;
-        [SerializeField] private GameObject horizontalOverlay;
-        [SerializeField] private GameObject verticalOverlay;
+        [SerializeField] private GameObject idleEffect;
 
+        private MatchEffect onDestroyEffect;
         private Vector2Int direction = Vector2Int.right;
+
+        private void Awake()
+        {
+            onDestroyEffect = GetComponent<MatchEffect>();
+        }
 
         public override void OnCreate(SwapEventData swapData, Tile cause)
         {
@@ -20,11 +28,9 @@ namespace Match3
                 // stay default
                 return;
             }
+            var theirSr = cause.GetComponent<SpriteRenderer>();
+            GetComponent<SpriteRenderer>().CopyFrom(theirSr);
 
-            var mySr = GetComponent<SpriteRenderer>();
-            var causeSr = cause.GetComponent<SpriteRenderer>();
-
-            mySr.sprite = causeSr.sprite;
             tag = cause.tag;
 
             direction = swapData.swappedPos2 - swapData.swappedPos1;
@@ -33,12 +39,10 @@ namespace Match3
 
             if (direction == Vector2Int.up)
             {
-                horizontalOverlay.SetActive(false);
-                verticalOverlay.SetActive(true);
+                idleEffect.transform.rotation = Quaternion.Euler(0, 0, 90);
             } else
-            { 
-                horizontalOverlay.SetActive(true);
-                verticalOverlay.SetActive(false);
+            {
+                idleEffect.transform.rotation = Quaternion.Euler(0, 0, 0);
             }
         }
 
@@ -46,21 +50,30 @@ namespace Match3
         public override List<Match> OnDestroyed()
         {
             var myPos = new Vector2Int(Mathf.RoundToInt(transform.position.x), Mathf.RoundToInt(transform.position.y));
-            var matches = new List<Match>();
+
+            MatchElement[] elements;
 
             if (direction == Vector2Int.up)
             {
-                matches.Add(VerticalBoom(myPos));
+                elements = VerticalBoom(myPos);
             }
             else
             {
-                matches.Add(HorizontalBoom(myPos));
+                elements = HorizontalBoom(myPos);
             }
+
+           
+            onDestroyEffect?.SpawnEffect(elements);
+
+            var match = new Match(elements, false, BombScore);
+            var matches = new List<Match>();
+            matches.Add(match);
+
             return matches;
         }
 
 
-        private Match HorizontalBoom(Vector2Int myPos)
+        private MatchElement[] HorizontalBoom(Vector2Int myPos)
         {
             var elements = new List<MatchElement>();
 
@@ -77,11 +90,11 @@ namespace Match3
                 }
             }
 
-            return new Match(elements.ToArray(), false, BombScore);
+            return elements.ToArray();
         }
 
 
-        private Match VerticalBoom(Vector2Int myPos)
+        private MatchElement[] VerticalBoom(Vector2Int myPos)
         {
             var elements = new List<MatchElement>();
 
@@ -98,8 +111,9 @@ namespace Match3
                 }
             }
 
-            return new Match(elements.ToArray(), false, BombScore);
+            return elements.ToArray();
         }
+
 
     }
 }

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 using Util;
 
@@ -10,18 +11,17 @@ namespace Match3
         // alternately make an ObservableVariable that fires and event when it is updated
         [SerializeField] private IntVariable score;
 
-        [SerializeField] private int[] levelThresholds;
-        [SerializeField] private IntUnityEvent onLevelThresholdReached;
+        [SerializeField] private int[] levelScoreMultipliers;
+        [SerializeField] private GameObject scorePopupPrefab;
 
         private int cumulativeMatches = 0;
-        private int currentLevel = 0;
-        private int nextLevelThreashold = 1000;
+        private int currentMultiplier = 1;
 
         private void Start()
         {
-            if (levelThresholds.Length > 0)
+            if (levelScoreMultipliers.Length > 0)
             {
-                nextLevelThreashold = levelThresholds[0];
+                currentMultiplier = levelScoreMultipliers[0];
             }
         }
 
@@ -33,11 +33,6 @@ namespace Match3
         public void Score(Matches matches)
         {
             cumulativeMatches = Score(matches.matches, cumulativeMatches);
-
-            if (score.Value > nextLevelThreashold)
-            {
-                NextLevel();
-            }
         }
 
         private int Score(List<Match> matches, int totalMatches)
@@ -50,30 +45,37 @@ namespace Match3
             var newTotalMatches = matches.Count + totalMatches;
             for (int i = 0; i < matches.Count; ++i)
             {
-                var multiplier = i + totalMatches + 1;
+                var multiplier = (i + 1 + totalMatches) * currentMultiplier;
                 var scoreIncrease = (multiplier * matches[i].score);
+
+
+                // this should really be independant an abstracted
+                InstantiateScorePopup(scoreIncrease, matches[i]);
 
                 score.Value += scoreIncrease;
             }
             return newTotalMatches;
         }
 
-        private void NextLevel()
+        private void InstantiateScorePopup(int scoreIncrease, Match match)
         {
-            ++currentLevel;
+            var matchCause = match.Cause;
+            var popup = Instantiate(scorePopupPrefab, new Vector3(matchCause.i, matchCause.j), Quaternion.identity, transform);
+            popup.GetComponent<ScorePopup>().Popup(scoreIncrease);
 
-            // once we go past our configured level threshold amounts just double the score needed.
-            // this should lead to an exponential increase that makes getting too far past the "designed" level cap unlikely
-            if (levelThresholds.Length <= currentLevel)
+        }
+
+        public void OnNextLevel(int level)
+        {
+            var levelIndex = level - 1;
+            if (levelScoreMultipliers.Length <= levelIndex)
             {
-                nextLevelThreashold *= 2;
-            } else
-            {
-                nextLevelThreashold = levelThresholds[currentLevel];
+                currentMultiplier++;
             }
-
-            // +1 as currentLevel is 0 indexed
-            onLevelThresholdReached.Invoke(currentLevel + 1);
+            else
+            {
+                currentMultiplier = levelScoreMultipliers[levelIndex];
+            }
         }
     }
 }
