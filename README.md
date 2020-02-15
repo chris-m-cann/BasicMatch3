@@ -2,7 +2,7 @@
 
 A bejewled classic rip-off made in unity with a basic shapes in glowing neon aesthetic.
 
-![In game screenshot](https://github.com/chris-m-cann/BasicMatch3/readmeart/Capture.PNG)
+![In game screenshot](https://github.com/chris-m-cann/BasicMatch3/master/readmeart/Capture.PNG)
 
 This was my first "finished" game made over about 2 months on-and-off. I learned a lot in the course of making it and had fun doing it so in those ways it was a success. Yay!! Go me!! Having said that, there is still a lot missing and I took a whole bunch of wrong turns that I want to avoid on my next project. So I thought a postmortom/ retrospective might help future Chris make something faster and better next time (no pressure future Chris).
 
@@ -39,7 +39,7 @@ These are the main takeaways from this project:
 
 
 
-![doh](https://github.com/chris-m-cann/BasicMatch3/readmeart/facepalm.jpg)
+![doh](https://github.com/chris-m-cann/BasicMatch3/master/readmeart/facepalm.jpg)
 
 
 
@@ -67,7 +67,7 @@ Damn it Jim, I'm a programmer not an artist! I tried to keep the games aesthetic
 
 #### Takeaways
 
-![tasty learning](https://github.com/chris-m-cann/BasicMatch3/readmeart/learnding.gif)
+![tasty learning](https://github.com/chris-m-cann/BasicMatch3/master/readmeart/learnding.gif)
 
 
 
